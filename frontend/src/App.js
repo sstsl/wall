@@ -94,7 +94,7 @@ class App extends Component {
         form = <SignupForm handle_signup={this.handle_signup} />;
         break;
       case 'wall':
-          form = <Wall />;
+          form = < Wall />;
           break;
       case 'post':
           form = <Post />;
@@ -104,18 +104,29 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div style={{'background-color': 'skyblue' }}className="App">
         <Nav
           logged_in={this.state.logged_in}
           display_form={this.display_form}
           handle_logout={this.handle_logout}
         />
-        <h3>
+        <h3 >
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+          <div style={{'color': 'white', 'font-family': 'Copperplate'}}>WALL APP</div>
+        <br/>
+        <br/>
           {this.state.logged_in
             ? `Hello, ${this.state.username}`
-            : 'Sign up or Log in to make a post.'}
+            : 'sign up or log in to make a post'}
         </h3>
+        <div style={{'background-color': 'white' }}>
+        <br/>
+
         {form}
+        </div>
 
       </div>
     );

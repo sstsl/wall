@@ -9,7 +9,7 @@ class Wall extends Component {
   async componentDidMount() {
     try {
       const res = await fetch('http://localhost:8000/api/', {
-        
+
       });
       const todos = await res.json();
       this.setState({
@@ -22,11 +22,16 @@ class Wall extends Component {
 
   render() {
     return (
-      <div>
+      <div >
+
+      <div style={{}}> {'THE WALL:'} </div>
+      <br/>
+      <br/>
+
         {this.state.todos.map(item => (
           <div key={item.id}>
-            <h1>{item.title}</h1>
-            <span>{item.description}</span>
+            <span><div style={{}}>{item.description}</div></span>
+            <h1 style={{'font-size': 12, 'font-style': 'italic'}}>By: {item.title}</h1>
           </div>
         ))}
       </div>
