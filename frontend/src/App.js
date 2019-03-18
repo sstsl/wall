@@ -8,6 +8,7 @@ import SignupForm from './components/SignupForm';
 import Wall from './components/Wall';
 import Post from './components/Post';
 import './App.css';
+import * as emailjs from 'emailjs-com';
 
 class App extends Component {
   constructor(props) {
@@ -65,6 +66,7 @@ class App extends Component {
       .then(res => res.json())
       .then(json => {
         localStorage.setItem('token', json.token);
+        emailjs.send('default_service', 'template_vJqyko22',new Object(), 'user_wJMMEjpLsOxs5uDRznhqL');
         this.setState({
           logged_in: true,
           displayed_form: '',
