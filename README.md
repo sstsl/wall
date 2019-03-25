@@ -24,9 +24,10 @@ How to Test:
 4. Create a post
 5. View the wall as a user, new post should appear
 
+(npm: '5.6.0')
 How to Run:
 1. Clone the repo
-2. cd to backend, run source env/bin/activate, cd mysite and run python manage.py runserver 0.0.0.0:8000
+2. cd to backend, pip install requirements, run source env/bin/activate, cd mysite and run python manage.py runserver 0.0.0.0:8000
 3. Open a new terminal window and cd to frontend
 4. npm install, npm start
 
