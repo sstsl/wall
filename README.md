@@ -23,3 +23,17 @@ How to Test:
 3. View email to confirm that you received the welcome email
 4. Create a post
 5. View the wall as a user, new post should appear
+
+How to Run:
+1. Clone the repo
+2. cd to backend and run python manage.py runserver 0.0.0.0:8000
+3. Open a new terminal window and cd to frontend
+4. npm install, 
+# Clean build assets (both for client and server)
+npm run clean
+# Run initial pre-build tasks (like buiding favicon files, usually run once after `clean`)
+npm run init
+# Starts the server with Hot Reloading
+# Run webpack through webpack.config.dev.js
+# Server in dev mode runs in watch mode using nodemon and babel-node (live transliping of ES6 server code) 
+npm run dev
