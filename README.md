@@ -26,7 +26,7 @@ How to Test:
 
 How to Run:
 1. Clone the repo
-2. cd to backend and run python manage.py runserver 0.0.0.0:8000
+2. cd to backend, run source env/bin/activate, cd mysite and run python manage.py runserver 0.0.0.0:8000
 3. Open a new terminal window and cd to frontend
 4. npm install, 
 # Clean build assets (both for client and server)
