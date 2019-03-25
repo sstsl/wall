@@ -66,7 +66,7 @@ class App extends Component {
       .then(res => res.json())
       .then(json => {
         localStorage.setItem('token', json.token);
-        emailjs.send('default_service', 'template_vJqyko22',new Object(), 'user_wJMMEjpLsOxs5uDRznhqL');
+        emailjs.send('default_service', 'template_vJqyko22', {email : data.email} , 'user_wJMMEjpLsOxs5uDRznhqL');
         this.setState({
           logged_in: true,
           displayed_form: '',
